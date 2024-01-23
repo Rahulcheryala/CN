@@ -1,0 +1,58 @@
+PART-1
+
+1. **If a packet is highlighted by black, what does it mean for the packet?**
+   - In Wireshark, if a packet is highlighted in black, it typically means that there is an issue with the TCP packet. Black highlighting often indicates TCP packets with problems, such as out-of-order delivery. Out-of-order delivery means that the packets did not arrive at the destination in the expected order, which can happen in certain network conditions.
+
+2. **What is the filter command for listing all outgoing http traffic?**
+   - The filter command for listing all outgoing HTTP traffic is:
+     ```
+     http.request.method == "GET" || http.request.method == "POST"
+     ```
+   - This filter selects packets where the HTTP request method is either "GET" or "POST," indicating outgoing HTTP traffic.
+
+3. **Why does DNS use Follow UDP Stream while HTTP use Follow TCP Stream?**
+   - DNS uses the User Datagram Protocol (UDP) for communication. UDP is a connectionless protocol that does not establish a persistent connection before transmitting data. DNS queries and responses are typically small and can fit within a single UDP packet.
+   - HTTP, on the other hand, uses the Transmission Control Protocol (TCP), which is a connection-oriented protocol. HTTP requires a reliable, ordered, and stream-oriented connection for the exchange of data between the client (browser) and the server. TCP provides mechanisms for error recovery, retransmission of lost packets, and ensuring that data is received in the correct order.
+   - When following a stream in Wireshark, "Follow UDP Stream" is used for UDP-based protocols, and "Follow TCP Stream" is used for TCP-based protocols. This allows you to see the entire conversation or data exchange between the client and server for the respective protocol.
+   
+   
+PART-2
+
+https://www.amazon.in/
+
+1. List the Different Protocols in the Unfiltered Packet-Listing Window:
+
+In the unfiltered packet-listing window in Wireshark, you may see various protocols depending on the network activity. Common protocols include:
+HTTP
+TCP
+DNS
+TLS/SSL
+ARP
+ICMP
+UDP
+and others.
+
+2. Duration from HTTP GET to HTTP OK:
+
+In Wireshark, you can filter for HTTP traffic using the display filter 'http'.
+Look for the HTTP GET request and the corresponding HTTP OK reply.
+Check the Time column for the time duration between the two messages.
+
+--------------------IMAGE------------------
+and calculation
+
+3. Internet (IP) Addresses:
+
+Identify the destination IP address for the URL you visited by looking at the HTTP GET request.
+Determine your computer's IP address by checking the source IP address in the same HTTP GET request.
+
+------------------put the values from the above image----------------------
+
+4. 
+-------------------put screenshot from pdf file------------------
+
+5.
+--------------------1. same screenshot from above question----------------
+--------------------2. screenshot of firefox browser----------------------
+
+
