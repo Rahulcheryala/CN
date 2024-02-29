@@ -24,5 +24,5 @@ def server():
         finally:
             connection.close()
             
-if __name__ == "__main__":
-    server()
+# if __name__ == "__main__":
+server()
