@@ -1,6 +1,6 @@
+from base64 import b64encode
 import socket
 import ssl
-from base64 import b64encode
 
 userEmail = "smtplab23@gmail.com"
 userPassword = "lmvgusmmhxkmzoti"
@@ -36,12 +36,10 @@ print(recv1)
 if recv1[:3] != '250':
     print('250 reply not received from server.')
 
+# authentication
 clientSocket.send("STARTTLS\r\n".encode())
 clientSocket.recv(1024)
 sslClientSocket = ssl.wrap_socket(clientSocket)
-# sslContext = ssl.create_default_context()
-# sslClientSocket = sslContext.wrap_socket(clientSocket, server_hostname="smtp.gmail.com")
-
 sslClientSocket.send("AUTH LOGIN\r\n".encode())
 print(sslClientSocket.recv(1024))
 sslClientSocket.send(b64encode(userEmail.encode()) + "\r\n".encode())
@@ -51,14 +49,14 @@ print(sslClientSocket.recv(1024))
 
 # Send MAIL FROM command and print server response.
 #Fill in start
-sslClientSocket.send("MAIL FROM: {}\r\n".format(userEmail).encode())
+sslClientSocket.send("MAIL FROM: <{}>\r\n".format(userEmail).encode())
 recv2 = sslClientSocket.recv(1024).decode()
 print(recv2)
 #Fill in end
 
 # Send RCPT TO command and print server response.
 #Fill in start
-sslClientSocket.send("RCPT TO: {}\r\n".format(userDestinationEmail).encode())
+sslClientSocket.send("RCPT TO: <{}>\r\n".format(userDestinationEmail).encode())
 recv3 = sslClientSocket.recv(1024).decode()
 print(recv3)
 #Fill in end
@@ -90,4 +88,4 @@ recv6 = sslClientSocket.recv(1024).decode()
 print(recv6)
 #Fill in end
 
-clientSocket.close()
+sslClientSocket.close()
