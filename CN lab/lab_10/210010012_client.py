@@ -32,7 +32,8 @@ for i in range(1, num_pings + 1):
         rtt = end_time - start_time
 
         # Print the response message from server and RTT
-        print(f"Reply from {server}: {response.decode()}, RTT = {rtt:.6f} seconds")
+        print(f"Reply from {server}: {
+            response.decode()}, RTT = {rtt:.6f} seconds")
 
     except socket.timeout:
         # Handle timeout
