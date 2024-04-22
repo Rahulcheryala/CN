@@ -47,19 +47,19 @@
 
 ### Lab Topics:
 
-1. **Lab 1: Unix Tools**
-2. **Lab 2: Introduction to Wireshark**
-3. **Lab 3: HTTP**
-4. **Lab 4: DNS**
-5. **Lab 5: TCP**
-6. **Lab 6: UDP**
-7. **Lab 7: IP, NAT & SMTP**
-8. **Lab 8: DHCP**
-9. **Lab 9: ICMP**
-10. **Lab 10: Ethernet & ARP**
-11. **Lab 11: WiFi**
-12. **Lab 12: TLS**
-13. **Lab 13: NS3**
+- **Lab 1: Unix Tools**
+- **Lab 2: Introduction to Wireshark**
+- **Lab 3: HTTP**
+- **Lab 4: DNS**
+- **Lab 5: TCP**
+- **Lab 6: UDP**
+- **Lab 7: IP, NAT & SMTP**
+- **Lab 8: DHCP**
+- **Lab 9: ICMP**
+- **Lab 10: Ethernet & ARP**
+- **Lab 11: WiFi**
+- **Lab 12: TLS**
+- **Lab 13: NS3**
 
 
 ## Additional Information
