@@ -1,0 +1,57 @@
+WIFI
+	
+PART 1
+
+1.	SSID 1 : "30 Munroe St" | SSID 2 : "linksys_SES_24086"
+2.	linksys_ses_24086 -> Beacon Interval: 0.102400 [Seconds] | 30 Munroe St. -> Beacon Interval: 0.102400 [Seconds]
+3.	Source address: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+4.	Destination address: Broadcast (ff:ff:ff:ff:ff:ff)
+5.	BSS Id: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+6.	Supported Rates 1(B), 2(B), 5.5(B), 11(B), [Mbit/sec]
+	Extended Supported Rates 6(B), 9, 12(B), 18, 24(B), 36, 48, 54, [Mbit/sec]
+	
+PART 2
+
+1.	Source address: Intel_d1:b6:4f (00:13:02:d1:b6:4f)
+	Destination address: CiscoLinksys_f4:eb:a8 (00:16:b6:f4:eb:a8)
+	BSS Id: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+	
+	Wireless Host : Source address: Intel_d1:b6:4f (00:13:02:d1:b6:4f)
+	Access Point : BSS Id: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+	First-Hop Router : Destination address: CiscoLinksys_f4:eb:a8 (00:16:b6:f4:eb:a8)
+	
+	Src  IP : 192.168.1.109
+	Dest IP : 128.119.245.12
+	
+2.	Source address: CiscoLinksys_f4:eb:a8 (00:16:b6:f4:eb:a8)
+	Destination address: 91:2a:b0:49:b6:4f (91:2a:b0:49:b6:4f)
+	BSS Id: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+	
+	IP : 128.119.245.12
+	
+PART 3
+
+1.	Actions -> DHCP Release and Deauthentication. I expected to see Dissassociation request.
+2.	13 Authentication Requests.
+3.	Host want it to be open. Authentication Algorithm: Open System (0).
+4.	I can’t find any reply from the AP. This is may be because the AP is configured to require a key when associating with that AP, so the AP is likely ignoring requests for open access.
+5.	Host -> AP : 63.168087s | AP -> Host : 63.169071s
+6.	ASSOCIATE REQUEST : 63.169910. | ASSOCIATE RESPONSE : 63.192101
+7.	From Host : Supported Rates 1(B), 2(B), 5.5(B), 11(B), 6(B), 9, 12(B), 18, [Mbit/sec]
+				Extended Supported Rates 24(B), 36, 48, 54, [Mbit/sec]
+	From AP   : Supported Rates 1(B), 2(B), 5.5(B), 11(B), [Mbit/sec]
+				Extended Supported Rates 6(B), 9, 12(B), 18, 24(B), 36, 48, 54, [Mbit/sec]
+	Overall both Host and AP are willing to use above transmission rates. Transmission rates in both are same.
+
+PART 4
+
+1.	PROBE REQUEST:
+		Sender address: Intel_1f:57:13 (00:12:f0:1f:57:13)
+		Receiver address: Broadcast (ff:ff:ff:ff:ff:ff)
+		BSS Id: Broadcast (ff:ff:ff:ff:ff:ff)
+	PROBE RESPONSE:
+		Sender address: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+		Receiver address: Intel_1f:57:13 (00:12:f0:1f:57:13)
+		BSS Id: CiscoLinksys_f7:1d:51 (00:16:b6:f7:1d:51)
+		
+	A PROBE REQUEST is used by a host in active scanning to find an Access Point. A PROBE RESPONSE is sent by the access point to the host sending the request.
